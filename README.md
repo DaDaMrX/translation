@@ -23,11 +23,11 @@ $ python trainslate.py -t en "你好"
 Hello
 ```
 
-[x] Translate with API  
-[ ] Translate with model
+- [x] Translate with API  
+- [ ] Translate with model
 
 
 ## Speech-to-text
 
-[ ] Speech-to-text with API  
-[ ] Speech-to-text with model
+- [ ] Speech-to-text with API  
+- [ ] Speech-to-text with model
