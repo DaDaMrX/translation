@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Command line tool for speech to text conversion.
+"""Command line tool for text to speech conversion.
 
 Authors:
     Chengxin Xin [xin.chengxin@foxmail.com]
@@ -13,13 +13,10 @@ SECRET_KEY = 'Dqg1iIt04WBWPSGpmSerPQu0xC6t7rqy'
 
 client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)
 
-# read audio file
-def get_file_content(filePath):
-    with open(filePath, 'rb') as fp:
-        return fp.read()
-
-res = client.asr(get_file_content('stt_audio.wav'), 'wav', 16000, {
-    'dev_pid': 1537,
+result  = client.synthesis('你好,信息检索', 'zh', 1, {
+    'vol': 5,
 })
 
-print(res)
+if not isinstance(result, dict):
+    with open('audio.mp3', 'wb') as f:
+        f.write(result)
