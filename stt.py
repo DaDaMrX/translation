@@ -7,15 +7,31 @@ Authors:
 
 import argparse
 from aip import AipSpeech
-    
+from pydub import AudioSegment
+
 APP_ID = '15220687'
 API_KEY = 'HZffI2RvXSp7H29n6bXo98YW'
 SECRET_KEY = 'Dqg1iIt04WBWPSGpmSerPQu0xC6t7rqy'
 
 # read audio file
 def get_file_content(filePath):
-    with open(filePath, 'rb') as fp:
+
+    format(filePath)
+
+    with open('audio_tmp.wav', 'rb') as fp:
         return fp.read()
+
+def format(filePath):
+    sound1 = AudioSegment.from_file(filePath, format="wav")
+
+    # 修改对象参数
+    sound2=sound1.set_frame_rate(16000)
+    sound2=sound2.set_channels(1)
+    sound2=sound2.set_sample_width(2)
+    
+    #导出wav文件
+    sound2.export('audio_tmp.wav',format='wav',)
+
 
 def stt(audio_address, target="zh"):
     
