@@ -29,5 +29,12 @@ Hello
 
 ## Speech-to-text
 
-- [ ] Speech-to-text with API  
+Usage:
+```shell
+$ python stt.py -t zh stt_audio.wav
+
+啊啊啊。
+```
+
+- [x] Speech-to-text with API  
 - [ ] Speech-to-text with model
