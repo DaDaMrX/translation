@@ -6,7 +6,7 @@ Translation and Speech-to-text component of the final project in Information Ret
 
 - Heng-Da Xu [dadamrxx@gmail.com](dadamrxx@gmail.com)
 - Jia-Nan Guo [guojn97@gamil.com](guojn97@gamil.com)
-- Yu Bo
+- Yu Bai [wnwhiteby@gmail.com](wnwhiteby@gmail.com)
 - Chengxin Xin [xin.chengxin@foxmail.com](https://github.com/fihxc)
 - Shuyang Lin
 
@@ -37,4 +37,5 @@ $ python stt.py -t zh stt_audio.wav
 ```
 
 - [x] Speech-to-text with API  
+- [x] Video-to-speech
 - [ ] Speech-to-text with model
