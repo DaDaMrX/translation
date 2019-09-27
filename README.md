@@ -7,7 +7,7 @@ Translation and Speech-to-text component of the final project in Information Ret
 - Heng-Da Xu [dadamrxx@gmail.com](dadamrxx@gmail.com)
 - Jia-Nan Guo [guojn97@gamil.com](guojn97@gamil.com)
 - Yu Bo
-- Chengxin Xin [E-Mail](xin.chengxin@foxmail.com)
+- Chengxin Xin [xin.chengxin@foxmail.com](xin.chengxin@foxmail.com)
 - Shuyang Lin
 
 ## Translation
