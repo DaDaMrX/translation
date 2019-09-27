@@ -38,3 +38,4 @@ $ python stt.py -t zh stt_audio.wav
 
 - [x] Speech-to-text with API  
 - [ ] Speech-to-text with model
+- [ ] Video-to-speech
