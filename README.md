@@ -37,5 +37,5 @@ $ python stt.py -t zh stt_audio.wav
 ```
 
 - [x] Speech-to-text with API  
+- [x] Video-to-speech
 - [ ] Speech-to-text with model
-- [ ] Video-to-speech
