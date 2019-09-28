@@ -8,7 +8,7 @@ Translation and Speech-to-text component of the final project in Information Ret
 - Jia-Nan Guo [guojn97@gamil.com](guojn97@gamil.com)
 - Yu Bai [wnwhiteby@gmail.com](wnwhiteby@gmail.com)
 - Chengxin Xin [xin.chengxin@foxmail.com](https://github.com/fihxc)
-- Shuyang Lin
+- Shuyang Lin [linshuyang2017@gmail.com](linshuyang2017@gmail.com)
 
 ## Translation
 
@@ -29,7 +29,7 @@ Hello
 
 ### Translate by NN model
 
-- lease download the pretrained model from [here](https://drive.google.com/uc?id=12UK2evibWAWwIkqKhvyfGsFD-ImrJ6Hn&export=download).
+- lease download the pretrained model from [here](https://drive.google.com/uc?id=1D2QGRxHyAIJoJGsDlF7LgpfuDxOrnfuU&export=download).
 
 - Unzip the file to the root directory.
 
