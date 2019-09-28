@@ -6,8 +6,8 @@ Translation and Speech-to-text component of the final project in Information Ret
 
 - Heng-Da Xu [dadamrxx@gmail.com](dadamrxx@gmail.com)
 - Jia-Nan Guo [guojn97@gamil.com](guojn97@gamil.com)
-- Yu Bo
-- Chengxin Xin
+- Yu Bai [wnwhiteby@gmail.com](wnwhiteby@gmail.com)
+- Chengxin Xin [xin.chengxin@foxmail.com](https://github.com/fihxc)
 - Shuyang Lin
 
 ## Translation
@@ -46,5 +46,13 @@ Reference: [https://github.com/twairball/fairseq-zh-en](https://github.com/twair
 
 ## Speech-to-text
 
-- [ ] Speech-to-text with API  
+Usage:
+```shell
+$ python stt.py -t zh stt_audio.wav
+
+啊啊啊。
+```
+
+- [x] Speech-to-text with API  
+- [x] Video-to-speech
 - [ ] Speech-to-text with model
