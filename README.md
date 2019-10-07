@@ -52,7 +52,22 @@ $ python stt.py -t zh stt_audio.wav
 
 啊啊啊。
 ```
+```shell
+$ python vtt.py --video_address=video.mp4 -t='en'
+
+MoviePy - Writing audio in %s
+MoviePy - Done.
+总分段： 184
+取有效分段(大于2s小于10s)： 137
+0.0 ~ 3.047: here are those six topic areas again
+2.771 ~ 8.289: I'm describing activity is the fifth one in this series of lessons
+8.103 ~ 10.145: let's look at this topic now
+10.208 ~ 15.356: when your asked to describe an activity I think this is quite an easy topic
+15.1 ~ 19.807: but we still have to prepare some good vocabulary for it so that we're ready
+```
 
 - [x] Speech-to-text with API  
-- [x] Video-to-speech
+- [x] Video-to-speech with API
+- [x] Video-to-text with API
+- [ ] generate srt file
 - [ ] Speech-to-text with model
