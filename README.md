@@ -53,7 +53,7 @@ $ python stt.py -t zh stt_audio.wav
 啊啊啊。
 ```
 ```shell
-$ python vtt.py --video_address=video.mp4 -t='en'
+$ python vtt.py --video_address=video.mp4 -t='en' --output_file=out.srt
 
 MoviePy - Writing audio in %s
 MoviePy - Done.
@@ -69,5 +69,5 @@ MoviePy - Done.
 - [x] Speech-to-text with API  
 - [x] Video-to-speech with API
 - [x] Video-to-text with API
-- [ ] generate srt file
+- [x] generate srt file
 - [ ] Speech-to-text with model
