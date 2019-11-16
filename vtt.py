@@ -5,7 +5,7 @@ Authors:
     Yu Bai [wnwhiteby@gmail.com]
 """
 
-import path
+# import path
 import os
 from moviepy.editor import *
 import argparse
