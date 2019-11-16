@@ -1,1 +1,4 @@
+*.pyc
 model
+*.mp4
+*.wav
