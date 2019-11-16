@@ -1,4 +1,9 @@
+# -*- coding: utf-8 -*-
+"""Command line tool for speech split
 
+Authors:
+    Yu Bai [wnwhiteby@gmail.com]
+"""
 import argparse
 from pydub import AudioSegment
 from pydub.silence import detect_nonsilent
@@ -36,6 +41,23 @@ def split_on_silence(audio_segment, min_silence_len=1000, silence_thresh=-16, ke
     return chunks, starttime, endtime
 
 def speech_split(speech_file, save_dir):
+    """ 音频分割，并得到其时间轴位置
+
+    参数
+    ----------
+    speech_file : str
+        音频文件地址
+    save_dir : str
+        保存文件地址
+
+    返回值
+    -------
+    chunkss
+        分割音频文件地址
+    chunk_lens
+        音频起止时间
+
+    """
     sound = AudioSegment.from_mp3(speech_file)
     loudness = sound.dBFS
     #print(loudness)

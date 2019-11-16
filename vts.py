@@ -11,6 +11,16 @@ from moviepy.editor import *
 
 
 def videoToSpeech(source, target):
+    """提取视频的音频文件
+
+    参数
+    ----------
+    source : str
+        源文件地址
+    target : str
+        目标文件输出地址
+    """
+
     video = VideoFileClip(source)
     audio = video.audio
     audio.write_audiofile(target)
