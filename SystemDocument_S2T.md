@@ -33,3 +33,52 @@ here are those six topic areas again
 0:00:03,0 --> 0:00:08,0
 I am describing activity is the fifth one in this series of lessons
 ```
+
+## 文本翻译模块
+
+### 思路
+1. 实现了两种文本翻译方案：1）调用Google Translate API进行翻译，2）使用fairseq库训练神经网络模型进行翻译
+2. Google Translate API网址：`https://translate.googleapis.com/translate_a/single`, 
+可以通过指定参数进行中文到英文到翻译和英文到中文到翻译。（其实可以进行Google Translate支持到所有语言之间到翻译）
+3. 训练神经网络模型使用到数据集：WMT17 Chinese-English，网址：`http://www.statmt.org/wmt17/translation-task.html`
+4. 使用到的库：pytorch，facebook fairseq：`https://github.com/facebookresearch/fairseq`
+5. 模型架构：fconv sequence-to-sequence，参考论文：Convolutional Sequence to Sequence Learning `https://arxiv.org/abs/1705.03122`,
+A Convolutional Encoder Model for Neural Machine Translation `https://arxiv.org/abs/1611.02344`
+
+
+### 接口说明
+
+1. 命令行接口：`python translate.py`，参数：
+	1. `--method` 或 `-m`，后面可以跟`api`或`model`，api表示调用google translate api，model表示使用神经网络模型。默认为api。
+	2. `--target` 或 `-t`， 可以跟`zh`或`en`，zh表示将英文翻译成中文，en表示将中文翻译成英文。默认为zh。
+	3. 要进行翻译的文本
+
+2. Python函数接口：在`translate.py`文件中
+	1. Google Translate API：`translate_api(text, target)`
+	2. 模型：`translate_model(text, target)`
+	3. 参数说明：`text`是要翻译的中文或英文字符串，`target`可以是`zh`或`en`。
+
+
+### 示例
+
+1. 命令行接口
+```shell
+$ python trainslate.py -m api -t zh "hello"
+
+你好
+
+$ python trainslate.py -m api -t en "你好"
+
+Hello
+```
+
+2. Python函数接口
+```python
+>>> from translate import translate_api, translate_model
+>>> text = 'hello'
+>>> translate_api(text=text, target='zh')
+你好
+>>> text = '你好'
+>>> translate_model(text=text, target='zh')
+Hello
+```

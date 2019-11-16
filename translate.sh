@@ -1,0 +1,1 @@
+python translate.py -m api -t zh "what is your name"
