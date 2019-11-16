@@ -14,6 +14,7 @@ from pydub import AudioSegment
 from vts import videoToSpeech
 from stt import stt
 from speech_split import speech_split
+from translate import translate_api
 
 
 def convert_time(seconds):
@@ -62,7 +63,21 @@ def process(args):
         endtime = convert_time(int(chunk_lens[i][1]))
         lastend = int(chunk_lens[i][1])
         # print(str(starttime)+ ",0 --> " + str(endtime) + ",0 " +  stt("splits/"+ each, args.target))
-        tmp = str(i+1) + "\n" + str(starttime)+ ",0 --> " + str(endtime) + ",0 \n" +  stt("splits/"+ each, args.target)
+        sentence = stt("splits/"+ each, args.target)  
+        if args.translate:
+            if args.target == 'zh':
+                new_target = 'en'
+            else:
+                new_target = 'zh'
+                
+            translated_sentence = translate_api(sentence, new_target)
+            tmp = str(i+1) + "\n" + str(starttime)+ ",0 --> " + str(endtime) + ",0 \n" +  sentence + "\n" + translated_sentence
+        else:
+            tmp = str(i+1) + "\n" + str(starttime)+ ",0 --> " + str(endtime) + ",0 \n" +  sentence 
+
+
+
+
         res += (tmp + '\n\n')
         print(tmp)
         # print(stt("splits/"+ each, args.target))
@@ -84,6 +99,8 @@ if __name__ == '__main__':
                         help='video to be converted(mp4)')
     parser.add_argument('--target', '-t', default='zh', choices=['zh', 'en'],
                         help='Target language (Chinese or English)')
+    parser.add_argument('--translate', action="store_true",
+                        help='Whether the subtitle would be translated ')
 
     parser.add_argument('--output_file', 
                     type=str,
