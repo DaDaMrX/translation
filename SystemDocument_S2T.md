@@ -50,7 +50,7 @@ A Convolutional Encoder Model for Neural Machine Translation `https://arxiv.org/
 
 1. 命令行接口：`python translate.py`，参数：
 	1. `--method` 或 `-m`，后面可以跟`api`或`model`，api表示调用google translate api，model表示使用神经网络模型。默认为api。
-	2. `--target` 或 `-t`， 可以跟`zh`或`en`，zh表示将英文翻译成中文，en表示将中文翻译成英文。默认为zh。
+	2. `--target` 或 `-t`， 后面可以跟`zh`或`en`，zh表示将英文翻译成中文，en表示将中文翻译成英文。默认为zh。
 	3. 要进行翻译的文本
 
 2. Python函数接口：在`translate.py`文件中
