@@ -70,4 +70,18 @@ MoviePy - Done.
 - [x] Video-to-speech with API
 - [x] Video-to-text with API
 - [x] generate srt file
-- [ ] Speech-to-text with model
+- [x] Speech-to-text with model
+
+
+## 报告流程
+1. 展示英文原视频（为了演示效果，直接展示两部分合在一起的样例）
+2. 运行run.sh，查看生成英文字幕的过程（说明可以选择是否翻译这一选项）
+3. 在运行过程中，对系统思路进行描述，具体见说明书(翻译包括两个部分)
+4. 把生成字幕拖到视频中，查看结果
+5. 描述项目意义（方便看英文电影）
+6. 展示中文原视频
+7. 运行run2.sh，查看生成中文字幕过程
+8. 时间原因，直接演示中文字幕结果。
+9. 描述项目意义（方便外国学生）
+10. 单独展示翻译API
+
